@@ -1,11 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import PeerTable from './component/PeerTable';
+import logo from "./logo.svg";
+import "./App.css";
+import PeerTable from "./component/PeerTable";
+import ServerStateTable from "./component/ServerStateTable";
+
 function App() {
   return (
     <div className="App">
       {/* <header className="App-header"> */}
-        <PeerTable />
+      <ServerStateTable />
+      <PeerTable />
       {/* </header> */}
     </div>
   );

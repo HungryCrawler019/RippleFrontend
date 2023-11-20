@@ -1,14 +1,14 @@
-// src/components/PeerTable.js
+// src/components/ServerStateTable.js
 import React, { useState, useEffect } from "react";
 
-const PeerTable = () => {
-  const [peers, setPeers] = useState([]);
+const ServerStateTable = () => {
+  const [servers, setServers] = useState([]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      fetch("http://localhost:8001/peerinfo")
+      fetch("http://localhost:8001/serverstate")
         .then((response) => response.json())
-        .then((data) => setPeers(data))
+        .then((data) => setServers(data))
         .catch((error) => console.error("Error fetching data:", error));
     }, 1000); // 1000ms = 1 second
 
@@ -18,29 +18,31 @@ const PeerTable = () => {
 
   return (
     <div className="container mt-5">
-      <h2>Peer Information</h2>
+      <h2>Server State Information</h2>
       <table className="table">
         <thead>
           <tr>
-            <th>Public Key</th>
-            <th>Country</th>
+            <th>Ledger Index </th>
+            <th>Peers</th>
+            <th>Pubkey</th>
+            <th>Uptime (secs) </th>
+            <th>Proposers</th>
+            <th>Quorum</th>
             <th>Version</th>
-            <th>Server State</th>
-            <th>Direction</th>
-            <th>Latency</th>
-            <th>Ledgers</th>
+            <th>Node</th>
           </tr>
         </thead>
         <tbody>
-          {peers.map((peer) => (
-            <tr key={peer.pubkey}>
+          {servers.map((peer) => (
+            <tr key={peer.Node}>
+              <td>{peer.ledger_Index}</td>
+              <td>{peer.peers}</td>
               <td>{peer.pubkey}</td>
-              <td>{peer.country}</td>
+              <td>{peer.uptime}</td>
+              <td>{peer.proposers}</td>
+              <td>{peer.quorum}</td>
               <td>{peer.version}</td>
-              <td>{peer.serverState}</td>
-              <td>{peer.direction}</td>
-              <td>{peer.latency}</td>
-              <td>{peer.ledgers || "N/A"}</td>
+              <td>{peer.node}</td>
             </tr>
           ))}
         </tbody>
@@ -49,4 +51,4 @@ const PeerTable = () => {
   );
 };
 
-export default PeerTable;
+export default ServerStateTable;
