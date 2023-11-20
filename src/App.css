@@ -1,5 +1,19 @@
+
+@font-face {
+  font-family: 'gothambook';
+  src: url('./fonts/gothambook-webfont.woff2') format('woff2'),
+       url('./fonts/gothambook-webfont.woff') format('woff'),
+       url('./fonts/GothamBook.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 .App {
   text-align: center;
+  background: rgb(30, 40, 50);
+  font-family: 'gothambook' !important;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,8 +28,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #0000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +48,68 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.table {
+  --bs-table-color: rgb(200, 200, 205) !important;
+  --bs-table-bg: rgb(13, 23, 33) !important;
+  --bs-table-border-color: rgb(30,40,50) !important;
+}
+.table th {
+  background: rgb(30,40,50) !important ;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+}
+.table td {
+  vertical-align: middle;
+}
+
+
+/* Apply a border-radius to the table */
+.table-rounded {
+  border-collapse: separate; /* This is required to apply border-radius */
+  border-spacing: 0; /* Optional: removes the spacing between cells */
+  border-radius: 8px; /* Adjust the radius as needed */
+  overflow: hidden; /* Ensures the content does not overflow the rounded corners */
+}
+
+/* Apply border-radius to the first and last th and td elements */
+.table-rounded th:first-child,
+.table-rounded td:first-child {
+  border-top-left-radius: 8px; /* Adjust the radius as needed */
+  border-bottom-left-radius: 8px; /* Adjust the radius as needed */
+}
+
+.table-rounded th:last-child,
+.table-rounded td:last-child {
+  border-top-right-radius: 8px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 8px; /* Adjust the radius as needed */
+}
+
+/* Styles for webkit-based browsers */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the vertical scrollbar */
+  height: 12px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5e5e5e; /* Color of the scrollbar thumb */
+  border: 3px solid #2e2e2e; /* Creates padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7e7e7e; /* Color of the scrollbar thumb on hover */
+}
+
+/* Styles for Firefox */
+* {
+  scrollbar-width: thin; /* 'auto' or 'thin' */
+  scrollbar-color: #5e5e5e #2e2e2e; /* thumb and track color */
 }

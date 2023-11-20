@@ -1,16 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
-import PeerTable from "./component/PeerTable";
-import ServerStateTable from "./component/ServerStateTable";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import FirstPage from "./component/FirstPage";
 
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header"> */}
-      <ServerStateTable />
-      <PeerTable />
-      {/* </header> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/hub" element={<FirstPage />} />
+        <Route path="/" element={<FirstPage />} />
+        {/* <Route path="/" element={<Navigate replace to="/main.html" />} /> */}
+      </Routes>
+    </Router>
   );
 }
 

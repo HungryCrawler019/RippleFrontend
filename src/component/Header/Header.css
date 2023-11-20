@@ -1,0 +1,121 @@
+/* Header.css */
+
+.top_header {
+  /* background-color: #282c34; */
+  color: white;
+  padding-top: 10px;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.column {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.logo_box {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 50px; /* Adjust the size as needed */
+  margin-right: 10px;
+}
+
+.logo span {
+  font-size: 1.5rem;
+}
+
+.header_navigation {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-items {
+  margin-left: 20px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-items a:hover {
+  color: #ff4040; /* Highlight color on hover */
+}
+
+.active {
+  color: #ff4040 !important; /* Highlight color on hover */
+}
+.social_nav {
+  margin-left: 30px;
+}
+
+.social_nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.social_nav li {
+  margin-left: 10px;
+}
+
+.social_nav li a img {
+  height: 24px; /* Adjust the size as needed */
+}
+
+/* Mobile menu styles */
+.mobile_menu {
+  display: none; /* Hidden by default, display it on smaller screens if needed */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .header_navigation {
+    justify-content: center;
+  }
+  .table {
+    font-size: 11px !important;
+  }
+  .social_nav {
+    display: none; /* Optionally hide social links on smaller screens */
+  }
+}
+
+/* Additional responsive adjustments can be made as needed */
+
+@media (max-width: 425px) {
+  .header_navigation {
+    display: none;
+  }
+  .table {
+    font-size: 10px !important;
+  }
+}
