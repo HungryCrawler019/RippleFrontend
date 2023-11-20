@@ -1,8 +1,17 @@
 // src/components/ServerStateTable.js
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import offline from "../images/no-wifi.png"; // Relative to the current file
+import online from "../images/wifi.png"; // Relative to the current file
 
 const ServerStateTable = () => {
   const [servers, setServers] = useState([]);
+
+  // Styled image component
+  const StatusImages = styled.img`
+    width: 30px; /* Adjust the width as needed */
+    height: auto;
+  `;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -22,6 +31,7 @@ const ServerStateTable = () => {
       <table className="table">
         <thead>
           <tr>
+            <th>Node</th>
             <th>Ledger Index </th>
             <th>Peers</th>
             <th>Pubkey</th>
@@ -29,22 +39,41 @@ const ServerStateTable = () => {
             <th>Proposers</th>
             <th>Quorum</th>
             <th>Version</th>
-            <th>Node</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
-          {servers.map((peer) => (
-            <tr key={peer.Node}>
-              <td>{peer.ledger_Index}</td>
-              <td>{peer.peers}</td>
-              <td>{peer.pubkey}</td>
-              <td>{peer.uptime}</td>
-              <td>{peer.proposers}</td>
-              <td>{peer.quorum}</td>
-              <td>{peer.version}</td>
-              <td>{peer.node}</td>
+          {servers.length ? (
+            servers.map((peer) => (
+              <tr key={peer.Node}>
+                <td>{peer.node}</td>
+                <td>{peer.ledger_Index}</td>
+                <td>{peer.peers}</td>
+                <td>{peer.pubkey}</td>
+                <td>{peer.uptime}</td>
+                <td>{peer.proposers}</td>
+                <td>{peer.quorum}</td>
+                <td>{peer.version}</td>
+                <td>
+                  <StatusImages src={online} />
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr key="XRPKuwait HUB">
+              <td>"XRPKuwait HUB"</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>
+                <StatusImages src={offline} />
+              </td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>
