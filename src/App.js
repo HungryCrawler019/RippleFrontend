@@ -7,13 +7,14 @@ import {
   Navigate,
 } from "react-router-dom";
 import FirstPage from "./component/FirstPage";
+import HomePage from "./component/HomePage";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/hub" element={<FirstPage />} />
-        <Route path="/" element={<Navigate replace to="/html/main.html" />} />
+        <Route path="/" element={<HomePage />} />
       </Routes>
     </Router>
   );

@@ -3,11 +3,11 @@
 .top_header {
   /* background-color: #282c34; */
   color: white;
-  padding-top: 10px;
+  padding-top: 17px;
+  font-size: 14px;
 }
 
 .container-fluid {
-  max-width: 1200px;
   margin: auto;
   padding: 0 15px;
 }
@@ -36,16 +36,16 @@
 
 .logo img {
   height: 50px; /* Adjust the size as needed */
-  margin-right: 10px;
 }
 
 .logo span {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
 }
 
 .header_navigation {
   display: flex;
   justify-content: flex-end;
+  margin-right: 35px;
 }
 
 .navigation {
@@ -73,7 +73,7 @@
   color: #ff4040 !important; /* Highlight color on hover */
 }
 .social_nav {
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .social_nav ul {

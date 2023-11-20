@@ -12,8 +12,8 @@ const Header = () => {
         <div className="container-fluid">
           <div className="row">
             <div className="logo_box column">
-              <a className="logo" href="mainpage.html">
-                <img src={camelImage} alt="Logo" />
+              <a className="logo" href="./html/mainpage.html">
+                <img width="60" height="60" src={camelImage} alt="Logo" />
                 <span style={{color: "#ff4040"}}>XRP</span>&nbsp; <span style={{ color: "#fff" }}>Kuwait</span>
               </a>
               <div className="mobile_menu" style={{ display: "none" }}>
@@ -65,6 +65,9 @@ const Header = () => {
                       <img
                         src={socialMediaImage}
                         alt="Twitter"
+                        width={24}
+                        height={21}
+                        style={{"margin-top": "-5px"}}
                       />
                     </a>
                   </li>
