@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Xrp Kuwait</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/gif" href="assets/images/wired-lineal-1212-camel.gif">
+  <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+</head>
+<body style="margin: 0px;">
+  <header>
+    <div class="top_header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="logo_box column">
+            <a class="logo" href="mainpage.html">
+              <img src="assets/images/wired-lineal-1212-camel.gif"><span>XRP</span> <span style="color: #fff;">Kuwait</span>
+            </a>
+            <div class="mobile_menu" style="display: none;">
+              <span class="menu-bar"><img src="assets/images/three-horizontal-lines-icon.svg" width="60" height="60"></span>
+              <a href="https://twitter.com/33baid" target="_blank"><img src="assets/images/x-social-media-white-icon.svg"></a>
+            </div>
+          </div>
+          <div class="column header_navigation">
+            <nav>
+              <ul class="navigation">
+                <li class="nav-items"><a href="servers.html">Servers</a></li>
+                <li class="nav-items"><a href="location.html">Location</a></li>
+                <li class="nav-items"><a href="about.html">About</a></li>
+                <li class="nav-items"><a href="contact.html">Contact</a></li>
+                <li class="nav-items"><a href="../hub">XRPK Hub</a></li>
+              </ul>
+          </nav>
+          <div class="social_nav">
+            <ul>
+              <li class="nav-items"><a href="https://twitter.com/33baid" target="_blank"><img src="assets/images/x-social-media-white-icon.svg"></a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+
+  <main>
+   <div class="body_box">
+     <div class="container">
+       <div class="row">
+         <div class="column home-content">
+          <div class="home_page_content">
+            <div class="home_content">
+             <div class="top-heading-content">
+               <h3>All the way</h3>
+               <h1>From a <span>52°</span> degree country</h1>
+               <h5>To the <span>XRP</span> Ledger</h5>
+             </div>
+             <div class="animated-content">
+              <div class="xrpl_blue"><span>XRPL</span> is </div>
+               <div class="xrpl-content"> a </div>
+                <div class="text"></div>
+             </div>
+           </div>
+           <div class="home-widget">
+           <div class="coinmarketcap-currency-widget" data-currencyid="52" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+         </div>
+          </div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 <span>XRP</span> Kuwait. All rights reserved.</p>
+    <p><small>Pubkey: nHUfxETNHsA9reyYCVYwNztEbifMg6U9YUdcgVvzMwGNpphKSSf6</small></p>
+  </footer>
+</body>
+<script type="text/javascript" src="assets/js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript" src="assets/js/typed.min.js"></script>
+<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+<script>
+var typing=new Typed(".text", {
+  strings: ['community powered utility', 'scalable and sustainable blockchain', 'decentralized, public blockchain', 'greener blockchain', '5', '4', '3', '2', '1', '.<img src="assets/images/wired-flat-14-doc-ok.gif">'],
+  //strings: ['community', 'scalable', '3', '2', '1', '.<img src="assets/images/wired-flat-14-doc-ok.gif">'],
+  showCursor: true,
+  typeSpeed: 60,
+  backSpeed: 40,
+  showCursor: false,
+  loop: true,
+  loopCount: Infinity,
+  //backDelay: 2500,
+
+  preStringTyped: function (index, self) {
+    //console.log(self.strings[index]);
+    if (self.strings[index] === '.<img src="assets/images/wired-flat-14-doc-ok.gif">') {
+      jQuery(".text").addClass("hide_text");
+      self.backSpeed = 2000;
+    }
+    else
+    {
+      jQuery(".text").removeClass("hide_text");
+      self.backSpeed = 40;
+    }
+
+    if (self.strings[index] === '5') {
+      $(".xrpl-content").text(" FAST ");
+    }
+    if (self.strings[index] === 'community powered utility') {
+      $(".xrpl-content").text(" a ");
+    }
+  }
+});
+
+jQuery(document).ready(function() {
+  jQuery('.mobile_menu .menu-bar').click(function() {
+    jQuery('.header_navigation').toggleClass('menu_open');
+  });
+});
+</script>
+</html>

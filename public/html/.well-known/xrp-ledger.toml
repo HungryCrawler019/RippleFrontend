@@ -1,0 +1,32 @@
+
+[METADATA]
+modified = 2023-11-16T00:00:00.000Z
+
+[[VALIDATORS]]
+public_key = "nHUfxETNHsA9reyYCVYwNztEbifMg6U9YUdcgVvzMwGNpphKSSf6"
+attestation = "4911343BD7120A9410D9C2FAECE5E5EFC8826C8206627AD4FC3E35F0C360FE5DF406D41C55D75F68658D4D40BA51C8F8BE470D53BB0070CBA8362183DC826807"
+network = "main"
+owner_country = "KW"
+server_country = "KW"
+server_location = "Kuwait City"
+server_cloud = false
+network_asn = 42961
+
+[[UNLS]]
+provider = "XRP Ledger Foundation"
+unl = "https://vl.xrplf.org"
+
+[[UNLS]]
+provider = "Ripple Labs"
+unl = "https://vl.ripple.com"
+
+
+[[ACCOUNTS]]
+address = "rhDdD5hgpbqckoNJRh7qcjrhYA7JeEZSkn"
+network = "main"
+
+[[PRINCIPALS]]
+name = "XRP Kuwait"
+email = "33baid@gmail.com"
+twitter = "@33baid"
+

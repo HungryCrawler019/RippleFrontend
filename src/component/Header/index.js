@@ -38,16 +38,16 @@ const Header = () => {
               <nav>
                 <ul className="navigation">
                   <li className="nav-items">
-                    <a href="../servers.html">Servers</a>
+                    <a href="./html/servers.html">Servers</a>
                   </li>
                   <li className="nav-items">
-                    <a href="../location.html">Location</a>
+                    <a href="./html/location.html">Location</a>
                   </li>
                   <li className="nav-items">
-                    <a href="../about.html">About</a>
+                    <a href="./html/about.html">About</a>
                   </li>
                   <li className="nav-items">
-                    <a href="../contact.html">Contact</a>
+                    <a href="./html/contact.html">Contact</a>
                   </li>
                   <li className="nav-items">
                     <a className=" active" href="./hub">XRPK Hub</a>

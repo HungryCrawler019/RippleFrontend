@@ -40,4 +40,20 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    (function () {
+      // List of routes that should serve static HTML files from the public directory
+      const staticRoutes = ["main", "servers", "location", "about", "contact"];
+
+      // Get the current path without the leading slash
+      const path = window.location.pathname.slice(1);
+
+      // Check if the current path is one of the static routes
+      if (staticRoutes.includes(path)) {
+        // Redirect to the corresponding HTML file in the public directory
+        window.location.href = `html/${path}.html`;
+      }
+      // Otherwise, let the React app handle the routing
+    })();
+  </script>
 </html>

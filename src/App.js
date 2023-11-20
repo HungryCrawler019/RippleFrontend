@@ -13,8 +13,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/hub" element={<FirstPage />} />
-        <Route path="/" element={<FirstPage />} />
-        {/* <Route path="/" element={<Navigate replace to="/main.html" />} /> */}
+        <Route path="/" element={<Navigate replace to="/html/main.html" />} />
       </Routes>
     </Router>
   );

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Xrp Kuwait</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/gif" href="assets/images/wired-lineal-1212-camel.gif">
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+  </head>
+  <body style="margin: 0px;">
+    <div class="splash_screen">
+      <video autoplay muted id="splashVideo" onloadedmetadata="this.controls=false">
+        <source src="assets/images/splash_video.mp4" type="video/mp4">
+      </video>
+      <div class="skip_intro_btn">Skip Intro</div>
+    </div>
+  </body>
+  <script type="text/javascript" src="assets/js/jquery-3.7.0.min.js"></script>
+  <script>
+  jQuery(document).ready(function() {
+    function showHomePage() {
+      window.location.href = 'mainpage.html';
+    }
+
+    setTimeout(function () { showHomePage(); }, 40000);
+
+    jQuery('.splash_screen .skip_intro_btn').on('click', function() {
+      showHomePage();
+    });
+  });
+  </script>
+</html>
