@@ -5,17 +5,19 @@ import camelImage from "../../images/wired-lineal-1212-camel.gif";
 import twitterImage from "../../images/twitter-icon-1.svg";
 import threeHorizontalImage from "../../images/three-horizontal-lines-icon.svg";
 import socialMediaImage from "../../images/x-social-media-white-icon.svg";
-const Header = () => {
+import { Link } from "react-router-dom";
+const Header = ({ isSticky }) => {
   return (
-    <header>
+    <header className={isSticky ? "no-sticky-header" : "sticky-header"}>
       <div className="top_header">
         <div className="container-fluid">
           <div className="row">
             <div className="logo_box column">
-              <a className="logo" href="./html/mainpage.html">
+              <Link className="logo" to="/">
                 <img width="60" height="60" src={camelImage} alt="Logo" />
-                <span style={{color: "#ff4040"}}>XRP</span>&nbsp; <span style={{ color: "#fff" }}>Kuwait</span>
-              </a>
+                <span style={{ color: "#ff4040" }}>XRP</span>&nbsp;{" "}
+                <span style={{ color: "#fff" }}>Kuwait</span>
+              </Link>
               <div className="mobile_menu" style={{ display: "none" }}>
                 <span className="menu-bar">
                   <img
@@ -25,40 +27,42 @@ const Header = () => {
                     alt="Menu"
                   />
                 </span>
-                <a
+                <Link
                   href="https://twitter.com/33baid"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={twitterImage} alt="Twitter" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="column header_navigation">
               <nav>
                 <ul className="navigation">
                   <li className="nav-items">
-                    <a href="./html/servers.html">Servers</a>
+                    <Link to="/servers">Servers</Link>
                   </li>
                   <li className="nav-items">
-                    <a href="./html/location.html">Location</a>
+                    <Link to="/location">Location</Link>
                   </li>
                   <li className="nav-items">
-                    <a href="./html/about.html">About</a>
+                    <Link to="/about">About</Link>
                   </li>
                   <li className="nav-items">
-                    <a href="./html/contact.html">Contact</a>
+                    <Link to="/contact">Contact</Link>
                   </li>
                   <li className="nav-items">
-                    <a className=" active" href="./hub">XRPK Hub</a>
+                    <Link className=" active" to="/hub">
+                      XRPK Hub
+                    </Link>
                   </li>
                 </ul>
               </nav>
               <div className="social_nav">
                 <ul>
                   <li className="nav-items">
-                    <a
-                      href="https://twitter.com/33baid"
+                    <Link
+                      to="https://twitter.com/33baid"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -67,9 +71,9 @@ const Header = () => {
                         alt="Twitter"
                         width={24}
                         height={21}
-                        style={{"margin-top": "-5px"}}
+                        style={{ "margin-top": "-5px" }}
                       />
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
