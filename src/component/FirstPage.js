@@ -4,7 +4,7 @@ import ServerStateTable from "./ServerStateTable";
 
 const FirstPage = () => {
   return (
-    <div className="App">
+    <div>
       <ServerStateTable />
       <PeerTable />
     </div>
