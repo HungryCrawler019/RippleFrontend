@@ -5,7 +5,7 @@ import camelImage from "../../images/wired-lineal-1212-camel.gif";
 import twitterImage from "../../images/twitter-icon-1.svg";
 import threeHorizontalImage from "../../images/three-horizontal-lines-icon.svg";
 import socialMediaImage from "../../images/x-social-media-white-icon.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Header = ({ isSticky }) => {
   return (
     <header className={isSticky ? "no-sticky-header" : "sticky-header"}>
@@ -13,11 +13,11 @@ const Header = ({ isSticky }) => {
         <div className="container-fluid">
           <div className="row">
             <div className="logo_box column">
-              <Link className="logo" to="/">
+              <NavLink className="logo" to="/">
                 <img width="60" height="60" src={camelImage} alt="Logo" />
                 <span style={{ color: "#ff4040" }}>XRP</span>&nbsp;{" "}
                 <span style={{ color: "#fff" }}>Kuwait</span>
-              </Link>
+              </NavLink>
               <div className="mobile_menu" style={{ display: "none" }}>
                 <span className="menu-bar">
                   <img
@@ -27,41 +27,49 @@ const Header = ({ isSticky }) => {
                     alt="Menu"
                   />
                 </span>
-                <Link
+                <NavLink
                   href="https://twitter.com/33baid"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <img src={twitterImage} alt="Twitter" />
-                </Link>
+                </NavLink>
               </div>
             </div>
             <div className="column header_navigation">
               <nav>
                 <ul className="navigation">
                   <li className="nav-items">
-                    <Link to="/servers">Servers</Link>
+                    <NavLink to="/servers" activeClassName="active">
+                      Servers
+                    </NavLink>
                   </li>
                   <li className="nav-items">
-                    <Link to="/location">Location</Link>
+                    <NavLink to="/location" activeClassName="active">
+                      Location
+                    </NavLink>
                   </li>
                   <li className="nav-items">
-                    <Link to="/about">About</Link>
+                    <NavLink to="/about" activeClassName="active">
+                      About
+                    </NavLink>
                   </li>
                   <li className="nav-items">
-                    <Link to="/contact">Contact</Link>
+                    <NavLink to="/contact" activeClassName="active">
+                      Contact
+                    </NavLink>
                   </li>
-                  <li className="nav-items">
-                    <Link className=" active" to="/hub">
+                  <li className="nav-items" activeClassName="active">
+                    <NavLink to="/hub" activeClassName="active">
                       XRPK Hub
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </nav>
               <div className="social_nav">
                 <ul>
                   <li className="nav-items">
-                    <Link
+                    <NavLink
                       to="https://twitter.com/33baid"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -73,7 +81,7 @@ const Header = ({ isSticky }) => {
                         height={21}
                         style={{ "margin-top": "-5px" }}
                       />
-                    </Link>
+                    </NavLink>
                   </li>
                 </ul>
               </div>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import Typed from "react-typed";
 
 import Header from "./Header";
 import vet from "../images/9x00d_tN_400x400.jpeg";
 import rabit from "../images/TBI_4pdH_400x400.jpeg";
+import ok from "../images/wired-flat-14-doc-ok.gif";
 import Footer from "./Footer";
 const AboutPage = () => {
   return (
@@ -23,7 +25,24 @@ const AboutPage = () => {
                       150+ other validators / 700+ ledger history nodes. All
                       validators come to an agreement on orders and the outcome
                       of XRP transactions every{" "}
-                      <div id="countdown-element" className="text"></div>{" "}
+                      <div id="countdown-element" className="text">
+                        <Typed
+                          strings={[
+                            "5",
+                            "4",
+                            "3",
+                            "2",
+                            "1",
+                            `<img src="${ok}">`,
+                          ]}
+                          typeSpeed={60}
+                          backSpeed={40}
+                          className="Typewriter"
+                          showCursor={false}
+                          loop={true}
+                          loopCount={Infinity}
+                        />
+                      </div>
                       seconds.
                     </p>
                     <p className="proudly_seection">
