@@ -12,16 +12,20 @@ import LocationPage from "./component/LocationPage";
 import AboutPage from "./component/AboutPage";
 import ContactPage from "./component/ContactPage";
 import ServersPage from "./component/Servers";
+import Layout from "./component/Layout";
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/hub" element={<FirstPage />} />
-        <Route path="/location" element={<LocationPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/servers" element={<ServersPage />} />
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Layout />}>
+          <Route index path="/" element={<HomePage />} />
+
+          <Route path="/hub" element={<FirstPage />} />
+          <Route path="/location" element={<LocationPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/servers" element={<ServersPage />} />
+        </Route>
       </Routes>
     </Router>
   );
