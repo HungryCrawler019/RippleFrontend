@@ -817,7 +817,7 @@ footer p:last-child {
 
 @media (max-width: 767px) {
   .mobile_menu {
-    display: block !important;
+    display: flex !important;
     float: right;
     margin-top: 8px;
     margin-right: 10px;
@@ -854,7 +854,7 @@ footer p:last-child {
     width: 24px;
   }
   .mobile_menu a img {
-    margin-top: -4px;
+    margin-top: -18px;
   }
   header .header_navigation .social_nav {
     display: none;
