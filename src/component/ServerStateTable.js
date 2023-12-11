@@ -46,66 +46,69 @@ const ServerStateTable = () => {
           autoplay={true}
           style={{ width: 75, height: 75, margin: "0 auto" }}
         />
-        <h3>Server State Information</h3>
-        <div className="container" style={{overflowX: 'auto'}}>
-        <table className="table table-rounded">
-          <thead>
-            <tr>
-              <th>Node</th>
-              <th>Pubkey</th>
-              <th>Ledger Index </th>
-              <th>Uptime</th>
-              <th>Proposers</th>
-              <th>Quorum</th>
-              <th>Version</th>
-              <th>Peers</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            {servers.length ? (
-              servers.map((peer) => (
-                <tr key={peer.Node}>
-                  <td>{peer.node}</td>
-                  <td>{`${peer.pubkey.substring(0, 31)} ${peer.pubkey.substring(32)}`}</td>
-                  <td>{peer.ledger_Index}</td>
-                  <td>{peer.uptime}</td>
-                  <td>{peer.proposers}</td>
-                  <td>{peer.quorum}</td>
-                  <td>{peer.version}</td>
-                  <td>{peer.peers}</td>
-                  <td style={centeredCellStyle}>
+        <h3 className="p-3">Server State Information</h3>
+        <div className="container" style={{ overflowX: "auto" }}>
+          <table className="table table-rounded">
+            <thead>
+              <tr>
+                <th>Node</th>
+                <th>Pubkey</th>
+                <th>Ledger Index </th>
+                <th>Uptime</th>
+                <th>Proposers</th>
+                <th>Quorum</th>
+                <th>Version</th>
+                <th>Peers</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {servers.length ? (
+                servers.map((peer) => (
+                  <tr key={peer.Node}>
+                    <td>{peer.node}</td>
+                    <td>{`${peer.pubkey.substring(
+                      0,
+                      31
+                    )} ${peer.pubkey.substring(32)}`}</td>
+                    <td>{peer.ledger_Index}</td>
+                    <td>{peer.uptime}</td>
+                    <td>{peer.proposers}</td>
+                    <td>{peer.quorum}</td>
+                    <td>{peer.version}</td>
+                    <td>{peer.peers}</td>
+                    <td style={centeredCellStyle}>
+                      <Lottie
+                        animationData={onlineAnimationData}
+                        loop={true}
+                        autoplay={true}
+                        style={{ width: 30, height: 30, margin: "0 auto" }}
+                      />
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr key="XRPKuwait HUB">
+                  <td>XRPKuwait HUB</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td class={centeredCellStyle}>
                     <Lottie
-                      animationData={onlineAnimationData}
+                      animationData={offlineAnimationData}
                       loop={true}
                       autoplay={true}
                       style={{ width: 30, height: 30, margin: "0 auto" }}
                     />
                   </td>
                 </tr>
-              ))
-            ) : (
-              <tr key="XRPKuwait HUB">
-                <td>XRPKuwait HUB</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td class={centeredCellStyle}>
-                  <Lottie
-                    animationData={offlineAnimationData}
-                    loop={true}
-                    autoplay={true}
-                    style={{ width: 30, height: 30, margin: "0 auto" }}
-                  />
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

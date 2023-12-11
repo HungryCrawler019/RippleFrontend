@@ -34,57 +34,59 @@ const PeerTable = () => {
           border: "none",
         }}
       >
-        <h3>Peer Information</h3>
-        <div className="container" style={{overflowX: 'auto'}}>
-        <table className="table table-rounded">
-          <thead>
-            <tr>
-              <th>Public Key</th>
-              <th>Country</th>
-              <th>Version</th>
-              <th>Server State</th>
-              <th>Direction</th>
-              <th>Latency</th>
-              <th>Ledgers</th>
-            </tr>
-          </thead>
-          <tbody>
-            {peers.map((peer) => (
-              <tr key={peer.pubkey}>
-                <td>{`${peer.pubkey.substring(0, 31)} ${peer.pubkey.substring(32)}`}</td>
-                <td>
-                  <ReactCountryFlag
-                    countryCode={peer.country}
-                    svg
-                    title={peer.country}
-                    style={{width: 30, height: 30}}
-                  />
-                </td>
-                <td>{peer.version}</td>
-                <td>{peer.serverState}</td>
-                <td>
-                  {peer.direction == "inbound" ? (
-                    <Lottie
-                      animationData={inboundState}
-                      loop={true}
-                      autoplay={true}
-                      style={{ width: 30, height: 30, margin: "0 auto" }}
-                    />
-                  ) : (
-                    <Lottie
-                      animationData={outboundState}
-                      loop={true}
-                      autoplay={true}
-                      style={{ width: 30, height: 30, margin: "0 auto" }}
-                    />
-                  )}
-                </td>
-                <td>{peer.latency}</td>
-                <td>{peer.ledgers || "N/A"}</td>
+        <h3 className="p-3">Peer Information</h3>
+        <div className="container" style={{ overflowX: "auto" }}>
+          <table className="table table-rounded">
+            <thead>
+              <tr>
+                <th>Public Key</th>
+                <th>Country</th>
+                <th>Version</th>
+                <th>Server State</th>
+                <th>Direction</th>
+                <th>Latency</th>
+                <th>Ledgers</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {peers.map((peer) => (
+                <tr key={peer.pubkey}>
+                  <td>{`${peer.pubkey.substring(0, 31)} ${peer.pubkey.substring(
+                    32
+                  )}`}</td>
+                  <td>
+                    <ReactCountryFlag
+                      countryCode={peer.country}
+                      svg
+                      title={peer.country}
+                      style={{ width: 30, height: 30 }}
+                    />
+                  </td>
+                  <td>{peer.version}</td>
+                  <td>{peer.serverState}</td>
+                  <td>
+                    {peer.direction == "inbound" ? (
+                      <Lottie
+                        animationData={inboundState}
+                        loop={true}
+                        autoplay={true}
+                        style={{ width: 30, height: 30, margin: "0 auto" }}
+                      />
+                    ) : (
+                      <Lottie
+                        animationData={outboundState}
+                        loop={true}
+                        autoplay={true}
+                        style={{ width: 30, height: 30, margin: "0 auto" }}
+                      />
+                    )}
+                  </td>
+                  <td>{peer.latency}</td>
+                  <td>{peer.ledgers || "N/A"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
