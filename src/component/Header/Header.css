@@ -27,7 +27,7 @@ header {
     padding-top: 0px;
 }
 .no-sticky-header{
-
+padding-top: 3px;
 }
 
 .container-fluid {

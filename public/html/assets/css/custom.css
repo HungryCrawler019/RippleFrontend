@@ -156,6 +156,7 @@ header .header_navigation {
   float: right;
   text-align: right;
   padding-top: 5px;
+  font-size: 14px;
 }
 header .logo_box {
   width: 32%;
