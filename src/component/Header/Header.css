@@ -14,6 +14,7 @@ header {
   max-width: 100% !important;
 }
 
+
 .sticky-header{
   z-index: 9;
   padding: 20px 0px !important;
@@ -115,6 +116,12 @@ header {
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
+  .navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
   .header_navigation {
     justify-content: center;
   }

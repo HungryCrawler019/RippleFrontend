@@ -790,7 +790,7 @@ footer p:last-child {
 }
 @media (max-width: 991px) {
   .body_box {
-    background: url(./images/main_bg.jpeg);
+    /* background: url(./images/main_bg.jpeg); */
     height: auto;
     background-size: cover;
     padding-bottom: 90px;
@@ -821,6 +821,9 @@ footer p:last-child {
     float: right;
     margin-top: 8px;
     margin-right: 10px;
+  }
+  .menu-bar{
+    cursor: pointer;
   }
   .body_box {
     padding-bottom: 200px;
@@ -924,6 +927,7 @@ footer p:last-child {
   .logo_box a,
   .logo_box a span {
     font-size: 22px;
+    float: left;
   }
   .logo_box .logo img {
     max-width: 50px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css"; // Make sure to create a Header.css file for styling
 
 import camelImage from "../../images/wired-lineal-1212-camel.gif";
@@ -7,6 +7,10 @@ import threeHorizontalImage from "../../images/three-horizontal-lines-icon.svg";
 import socialMediaImage from "../../images/x-social-media-white-icon.svg";
 import { Link, NavLink } from "react-router-dom";
 const Header = ({ isSticky }) => {
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
+  const toggleMenu = () => {
+    setIsMobileMenu((prev) => !prev);
+  };
   return (
     <header className={isSticky ? "no-sticky-header" : "sticky-header"}>
       <div className="top_header">
@@ -18,8 +22,8 @@ const Header = ({ isSticky }) => {
                 <span style={{ color: "#ff4040" }}>XRP</span>&nbsp;{" "}
                 <span style={{ color: "#fff" }}>Kuwait</span>
               </NavLink>
-              <div className="mobile_menu" style={{ display: "none" }}>
-                <span className="menu-bar">
+              <div className="mobile_menu">
+                <span className="menu-bar" onClick={() => toggleMenu()}>
                   <img
                     src={threeHorizontalImage}
                     width="60"
@@ -32,11 +36,15 @@ const Header = ({ isSticky }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={twitterImage} alt="Twitter" />
+                  <img src={socialMediaImage} alt="Twitter" />
                 </NavLink>
               </div>
             </div>
-            <div className="column header_navigation">
+            <div
+              className={`column header_navigation ${
+                isMobileMenu && "menu_open"
+              }`}
+            >
               <nav>
                 <ul className="navigation">
                   <li className="nav-items">
