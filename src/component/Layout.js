@@ -6,14 +6,15 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 const Layout = ({ children }) => {
   const location = useLocation();
   const isHubRoute = location.pathname === "/hub";
+  const isRoot = location.pathname === "/";
 
   return (
     <div className="App">
-      <Header isSticky={isHubRoute} />
+      {!isRoot && <Header isSticky={isHubRoute} />}
       <main>
         <Outlet />
       </main>
-      <Footer />
+      {!isRoot && <Footer />}
     </div>
   );
 };

@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import FirstPage from "./component/FirstPage";
 import HomePage from "./component/HomePage";
+import IntroPage from "./component/IntroPage";
 import LocationPage from "./component/LocationPage";
 import AboutPage from "./component/AboutPage";
 import ContactPage from "./component/ContactPage";
@@ -18,7 +19,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index path="/" element={<HomePage />} />
+          <Route index exact path="/" element={<IntroPage />} />
+          <Route path="/mainpage" element={<HomePage />} />
 
           <Route path="/hub" element={<FirstPage />} />
           <Route path="/location" element={<LocationPage />} />
