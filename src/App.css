@@ -846,6 +846,7 @@ footer p:last-child {
     margin: 10px 10px;
     width: 100%;
   }
+ 
   .mobile_menu img {
     max-width: 24px;
     margin-left: 15px;
@@ -863,10 +864,13 @@ footer p:last-child {
     visibility: visible;
     opacity: 1;
     left: 0;
+    z-index: 999;
+    
   }
   header .header_navigation ul.navigation li.nav-items a {
     font-size: 18px;
   }
+ 
   .home-content .we-are-running {
     width: 100%;
   }

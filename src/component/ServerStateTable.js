@@ -46,7 +46,7 @@ const ServerStateTable = () => {
           autoplay={true}
           style={{ width: 75, height: 75, margin: "0 auto" }}
         />
-        <h3 className="p-3">Server State Information</h3>
+        <h3 className="p-3 text-center">Server State Information</h3>
         <div className="container" style={{ overflowX: "auto" }}>
           <table className="table table-rounded">
             <thead>

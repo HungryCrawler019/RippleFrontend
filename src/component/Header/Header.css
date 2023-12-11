@@ -84,7 +84,7 @@ header {
 }
 
 .nav-items a:hover {
-  color: #ff4040; /* Highlight color on hover */
+  color: #ff4040 !important; /* Highlight color on hover */
 }
 
 .active {
