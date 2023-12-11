@@ -34,7 +34,7 @@ const PeerTable = () => {
           border: "none",
         }}
       >
-        <h3 className="p-3">Peer Information</h3>
+        <h3 className="p-3 text-center">Peer Information</h3>
         <div className="container" style={{ overflowX: "auto" }}>
           <table className="table table-rounded">
             <thead>
