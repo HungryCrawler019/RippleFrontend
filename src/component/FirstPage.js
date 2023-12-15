@@ -6,10 +6,6 @@ import { Helmet } from "react-helmet";
 const FirstPage = () => {
   return (
     <div>
-      <Helmet>
-        <title>Xrp Kuwait Public Hub</title>
-        <meta name="description" content="Xrp Kuwait Public Hub" />
-      </Helmet>
       <ServerStateTable />
       <PeerTable />
     </div>

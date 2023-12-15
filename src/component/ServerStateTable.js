@@ -11,7 +11,7 @@ const ServerStateTable = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      fetch("http://localhost:8001/serverstate")
+      fetch("https://xrpkuwait.com/serverstate")
         .then((response) => response.json())
         .then((data) => setServers(data))
         .catch((error) => {
@@ -31,7 +31,7 @@ const ServerStateTable = () => {
   };
 
   return (
-    <div className="container">
+    <div className="mx-5">
       <div
         className="card mt-5 py-2 shadow-sm"
         style={{
@@ -47,13 +47,13 @@ const ServerStateTable = () => {
           style={{ width: 75, height: 75, margin: "0 auto" }}
         />
         <h3 className="p-3 text-center">Server State Information</h3>
-        <div className="container" style={{ overflowX: "auto" }}>
-          <table className="table table-rounded">
+        <div className="mx-5" style={{ overflowX: "auto" }}>
+          <table className="table table-rounded" style={{ "textAlign": "center" }}>
             <thead>
               <tr>
                 <th>Node</th>
                 <th>Pubkey</th>
-                <th>Ledger Index </th>
+                <th className="no-wrap">Ledger Index </th>
                 <th>Uptime</th>
                 <th>Proposers</th>
                 <th>Quorum</th>
@@ -67,10 +67,7 @@ const ServerStateTable = () => {
                 servers.map((peer) => (
                   <tr key={peer.Node}>
                     <td>{peer.node}</td>
-                    <td>{`${peer.pubkey.substring(
-                      0,
-                      31
-                    )} ${peer.pubkey.substring(32)}`}</td>
+                    <td>{peer.pubkey}</td>
                     <td>{peer.ledger_Index}</td>
                     <td>{peer.uptime}</td>
                     <td>{peer.proposers}</td>

@@ -7,7 +7,7 @@ import ok from "../images/wired-flat-14-doc-ok.gif";
 const AboutPage = () => {
   return (
     <div className="">
-      <div className="body_box about-us_main">
+      <div className="body_box about-us_main" style={{"minHeight":"100vh"}}>
         <div className="container">
           <div className="row">
             <div className="column home-content about-page">
@@ -19,19 +19,19 @@ const AboutPage = () => {
                     running on a validator / ledger history mode along side 150+
                     other validators / 700+ ledger history nodes. All validators
                     come to an agreement on orders and the outcome of XRP
-                    transactions every{" "}
+                    transactions every&nbsp;{" "}
                     <div id="countdown-element" className="text">
                       <Typed
-                        strings={["5", "4", "3", "2", "1", `<img src="${ok}">`]}
-                        typeSpeed={60}
-                        backSpeed={40}
+                        strings={["5", "4", "3", "2", "1", `<img src="${ok}">`, `<img src="${ok}">`, `<img src="${ok}">`, `<img src="${ok}">`]}
+                        typeSpeed={80}
+                        backSpeed={80}
                         className="Typewriter"
                         showCursor={false}
                         loop={true}
                         loopCount={Infinity}
                       />
                     </div>
-                    seconds.
+                    &nbsp;seconds.
                   </p>
                   <p className="proudly_seection">
                     Proudly inspired by{" "}

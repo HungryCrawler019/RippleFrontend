@@ -3,9 +3,24 @@ import ok from "../images/wired-flat-14-doc-ok.gif";
 import logo from "../images/52.png";
 import Typed from "react-typed";
 
+const useExternalScript = (src) => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, [src]);
+};
+
 const HomePage = () => {
   const [changeText, setChangeText] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+
+  useExternalScript("https://files.coinmarketcap.com/static/widget/currency.js");
 
   const handleComplete = () => {
     setTimeout(() => {
@@ -72,7 +87,7 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="home-widget">
-                  <div className="coinmarketcap-currency-widget">
+                  {/* <div className="coinmarketcap-currency-widget">
                     <div className="header">
                       <div className="logo">
                         <img src={logo} />
@@ -102,7 +117,8 @@ const HomePage = () => {
                       </div>
                     </div>
                     <div className="footer">Powered by CoinMarketCap</div>
-                  </div>
+                  </div> */}
+                  <div className="coinmarketcap-currency-widget" data-currencyid="52" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
                 </div>
               </div>
             </div>

@@ -1,9 +1,8 @@
-
 @font-face {
   font-family: 'gothambook';
   src: url('./fonts/gothambook-webfont.woff2') format('woff2'),
-       url('./fonts/gothambook-webfont.woff') format('woff'),
-       url('./fonts/GothamBook.ttf') format('ttf');
+    url('./fonts/gothambook-webfont.woff') format('woff'),
+    url('./fonts/GothamBook.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,8 +11,8 @@
 @font-face {
   font-family: 'gothambold';
   src: url('./fonts/gothambold-webfont.woff2') format('woff2'),
-      url('./fonts/gothambold-webfont.woff') format('woff'),
-      url('./fonts/GothamBold.ttf') format('ttf');
+    url('./fonts/gothambold-webfont.woff') format('woff'),
+    url('./fonts/GothamBold.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -22,8 +21,8 @@
 @font-face {
   font-family: 'gothambook';
   src: url('./fonts/gothambook-webfont.woff2') format('woff2'),
-      url('./fonts/gothambook-webfont.woff') format('woff'),
-      url('./fonts/GothamBook.ttf') format('ttf');
+    url('./fonts/gothambook-webfont.woff') format('woff'),
+    url('./fonts/GothamBook.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -32,8 +31,8 @@
 @font-face {
   font-family: 'gothamlight';
   src: url('./fonts/gothamlight-webfont.woff2') format('woff2'),
-      url('./fonts/gothamlight-webfont.woff') format('woff'),
-      url('./fonts/GothamLight.ttf') format('ttf');
+    url('./fonts/gothamlight-webfont.woff') format('woff'),
+    url('./fonts/GothamLight.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -42,8 +41,8 @@
 @font-face {
   font-family: 'gothammedium';
   src: url('./fonts/gothammedium-webfont.woff2') format('woff2'),
-      url('./fonts/gothammedium-webfont.woff') format('woff'),
-      url('./fonts/GothamMedium.ttf') format('ttf');
+    url('./fonts/gothammedium-webfont.woff') format('woff'),
+    url('./fonts/GothamMedium.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -52,11 +51,12 @@
 @font-face {
   font-family: 'gothamthin';
   src: url('./fonts/gothamthin-webfont.woff2') format('woff2'),
-      url('./fonts/gothamthin-webfont.woff') format('woff');
+    url('./fonts/gothamthin-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 h1,
 .h1,
 h2,
@@ -71,34 +71,59 @@ h6,
 .h6 {
   font-family: "gothammedium";
 }
+
 p {
   line-height: 22px;
 }
+
 ul {
   margin: 0px;
   padding: 0px !important;
   list-style: none;
 }
+
 body {
   font-family: 'gothambook' !important;
   font-size: 16px !important;
-  color: #fff  !important;
+  color: #fff !important;
   margin: 0px !important;
-  position: relative  !important;
-  overflow-x: hidden  !important;
+  position: relative !important;
+  overflow-x: hidden !important;
 }
 
+main {
+  flex: 1;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 80%!important;
+  }
+}
 
 .container {
-  max-width: 1180px !important;
   margin: 0 10%;
   padding: 0 15px;
 }
-a, button {
+
+a,
+button {
   transition: 0.3s;
   background: transparent;
   color: #fff !important;
 }
+
 a,
 :hover,
 :focus,
@@ -150,6 +175,7 @@ a,
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -159,15 +185,17 @@ a,
 .table {
   --bs-table-color: rgb(200, 200, 205) !important;
   --bs-table-bg: rgb(13, 23, 33) !important;
-  --bs-table-border-color: rgb(30,40,50) !important;
+  --bs-table-border-color: rgb(30, 40, 50) !important;
 }
+
 .table th {
-  background: rgb(30,40,50) !important ;
+  background: rgb(30, 40, 50) !important;
   text-align: center;
   vertical-align: middle;
   padding-top: 3px !important;
   padding-bottom: 3px !important;
 }
+
 .table td {
   vertical-align: middle;
 }
@@ -175,42 +203,56 @@ a,
 
 /* Apply a border-radius to the table */
 .table-rounded {
-  border-collapse: separate; /* This is required to apply border-radius */
-  border-spacing: 0; /* Optional: removes the spacing between cells */
-  border-radius: 8px; /* Adjust the radius as needed */
-  overflow: hidden; /* Ensures the content does not overflow the rounded corners */
+  border-collapse: separate;
+  /* This is required to apply border-radius */
+  border-spacing: 0;
+  /* Optional: removes the spacing between cells */
+  border-radius: 8px;
+  /* Adjust the radius as needed */
+  overflow: hidden;
+  /* Ensures the content does not overflow the rounded corners */
 }
 
 /* Apply border-radius to the first and last th and td elements */
 .table-rounded th:first-child,
 .table-rounded td:first-child {
-  border-top-left-radius: 8px; /* Adjust the radius as needed */
-  border-bottom-left-radius: 8px; /* Adjust the radius as needed */
+  border-top-left-radius: 8px;
+  /* Adjust the radius as needed */
+  border-bottom-left-radius: 8px;
+  /* Adjust the radius as needed */
 }
 
 .table-rounded th:last-child,
 .table-rounded td:last-child {
-  border-top-right-radius: 8px; /* Adjust the radius as needed */
-  border-bottom-right-radius: 8px; /* Adjust the radius as needed */
+  border-top-right-radius: 8px;
+  /* Adjust the radius as needed */
+  border-bottom-right-radius: 8px;
+  /* Adjust the radius as needed */
 }
 
 /* Styles for webkit-based browsers */
 ::-webkit-scrollbar {
-  width: 12px; /* Width of the vertical scrollbar */
-  height: 12px; /* Height of the horizontal scrollbar */
+  width: 12px;
+  /* Width of the vertical scrollbar */
+  height: 12px;
+  /* Height of the horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: #2e2e2e; /* Color of the scrollbar track */
+  background: #2e2e2e;
+  /* Color of the scrollbar track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #5e5e5e; /* Color of the scrollbar thumb */
-  border: 3px solid #2e2e2e; /* Creates padding around the thumb */
+  background-color: #5e5e5e;
+  /* Color of the scrollbar thumb */
+  border: 3px solid #2e2e2e;
+  /* Creates padding around the thumb */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7e7e7e; /* Color of the scrollbar thumb on hover */
+  background: #7e7e7e;
+  /* Color of the scrollbar thumb on hover */
 }
 
 
@@ -218,7 +260,7 @@ a,
 /* Main section css start  */
 .body_box {
   background: url(./images/meanwhile-in-desert-hw.webp);
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
 }
 
@@ -237,6 +279,7 @@ a,
   font-size: 30px !important;
   color: #fff !important;
 }
+
 .social_nav li a img {
   max-width: 24px;
   width: 24px;
@@ -248,19 +291,23 @@ header .header_navigation ul.navigation li.nav-items {
   font-size: 14px;
   color: #fff;
 }
+
 header .header_navigation ul.navigation li.nav-items a {
   font-size: 14px;
   color: #fff;
 }
+
 header .header_navigation ul.navigation li.nav-items.active a,
 header .header_navigation ul.navigation li.nav-items:hover a {
   color: #ff4040;
 }
+
 header .header_navigation .social_nav,
 header .header_navigation nav {
   display: inline-block;
   vertical-align: middle;
 }
+
 header .header_navigation nav {
   margin-right: 20px;
 }
@@ -274,37 +321,45 @@ header .header_navigation {
   text-align: right;
   padding-top: 5px;
 }
+
 header .logo_box {
   width: 32%;
 }
+
 header .header_navigation ul.navigation li.nav-items {
   display: inline-block;
   margin: 0 10px;
   font-size: 14px;
   color: #fff;
 }
+
 header .header_navigation ul.navigation li.nav-items a {
   font-size: 14px;
   color: #fff;
 }
+
 header .header_navigation ul.navigation li.nav-items.active a,
 header .header_navigation ul.navigation li.nav-items:hover a {
   color: #ff4040;
 }
+
 header .header_navigation .social_nav,
 header .header_navigation nav {
   display: inline-block;
   vertical-align: middle;
 }
+
 header .header_navigation nav {
-  margin-right: 20px;
+  margin-right: 0px;
 }
+
 /* Splash Screen css */
 .universal-dnone header,
 .universal-dnone main,
 .universal-dnone footer {
   display: none;
 }
+
 .splash_screen {
   position: relative;
   max-height: 100vh;
@@ -332,22 +387,27 @@ header .header_navigation nav {
   opacity: 0.8;
   transition: 0.3s;
 }
+
 .splash_screen .skip_intro_btn:hover {
   opacity: 1;
 }
+
 .splash_screen.universal-dnone {
   display: none !important;
 }
+
 /* Main section css start  */
 .body_box {
   background: url(./images/meanwhile-in-desert-hw.webp);
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
 }
+
 .body_box .home-content {
   padding-top: 250px;
   width: 100%;
 }
+
 .body_box .home-content .top-heading-content h3 {
   font-size: 30px;
   font-weight: 100;
@@ -356,14 +416,17 @@ header .header_navigation nav {
   margin: 0;
   line-height: 50px;
 }
+
 .body_box .home-content .top-heading-content h1 {
   font-size: 46px;
   margin: 0px;
   line-height: normal;
 }
+
 .body_box .home-content .top-heading-content h1 span {
   color: #ff4040;
 }
+
 .body_box .home-content .top-heading-content h5 {
   font-size: 24px;
   font-weight: 100;
@@ -372,28 +435,34 @@ header .header_navigation nav {
   line-height: 50px;
   text-align: center;
 }
+
 .body_box .home-content .top-heading-content {
   max-width: 651px;
 }
+
 .body_box .home-content .top-heading-content h5 span {
   font-weight: bold;
   color: #5076f2;
   font-family: "gothammedium";
 }
+
 .body_box .home-content .animated-content {
   display: flex;
   font-size: 28px;
   margin-top: 30px;
   font-family: "gothammedium";
 }
+
 .body_box .home-content .animated-content .xrpl-content {
   margin-right: 10px;
 }
+
 .body_box .home-content .animated-content .text {
   color: #ff4040;
   text-transform: capitalize;
   position: relative;
 }
+
 .body_box .home-content .animated-content .text img {
   max-width: 60px;
   position: absolute;
@@ -401,6 +470,7 @@ header .header_navigation nav {
   left: -15px;
   top: -15px;
 }
+
 .body_box .home-content .animated-content .xrpl_blue {
   padding-right: 8px;
 }
@@ -408,6 +478,7 @@ header .header_navigation nav {
 .body_box .home-content .animated-content .xrpl_blue span {
   color: #fff;
 }
+
 .home_page_content {
   display: flex;
   flex-wrap: wrap;
@@ -423,15 +494,17 @@ header .header_navigation nav {
   width: 30%;
 }
 
-.home_page_content .home-widget .coinmarketcap-currency-widget > div {
+.home_page_content .home-widget .coinmarketcap-currency-widget>div {
   background: #08253cde;
 }
+
 /* Main section css End */
 /* Servers page css */
 .body_box .home-content.servers-page {
   padding-top: 100px;
   width: 100%;
 }
+
 .body_box .home-content h1 {
   font-size: 48px;
   font-weight: bold;
@@ -441,6 +514,7 @@ header .header_navigation nav {
   font-family: "gothammedium" !important;
   width: 100%;
 }
+
 .home-content .we-are-running h3 {
   font-size: 24px;
   margin: 20px 0 10px;
@@ -452,14 +526,17 @@ header .header_navigation nav {
   width: 100%;
   max-width: 800px;
 }
+
 .home-content .servers-contnet .location_inner p span {
   color: #ff4040;
 }
+
 .home-content .we-are-running {
   width: 100%;
   display: inline-block;
   float: left;
 }
+
 .home-content .we-are-running ul {
   font-size: 14px;
   line-height: 20px;
@@ -471,22 +548,28 @@ header .header_navigation nav {
 .home-content .we-are-running ul li {
   padding-bottom: 4px;
 }
+
 .home-content .we-are-running ul li.blue-color {
   padding-bottom: 10px;
 }
+
 .blue-color {
   color: #5076f2;
 }
+
 .home-content .we-are-running h3 img {
   vertical-align: middle;
 }
+
 .animated-images {
   text-align: center;
   margin-top: 30px;
 }
+
 .body_box .home-content .animated-content .text.hide_text {
   font-size: 0;
 }
+
 .animated-images ul.aniImages {
   display: flex;
   align-items: center;
@@ -500,6 +583,7 @@ header .header_navigation nav {
 .animated-images ul.aniImages li {
   margin: 10px;
 }
+
 ul.contact-information li img {
   margin-right: 15px;
   vertical-align: middle;
@@ -508,27 +592,33 @@ ul.contact-information li img {
 ul.contact-information li {
   margin-bottom: 15px;
 }
+
 .about_us p {
   display: inline;
   line-height: 22px;
 }
+
 .about_us #countdown-element {
   display: inline-block;
   min-width: 11px;
   color: #ff4040;
 }
+
 .about_us #image-element {
   display: inline;
   position: absolute;
   max-width: 40px;
 }
+
 .about_us .text {
   position: relative;
 }
+
 .about_us .text.hide_text {
   font-size: 0;
   min-width: 20px !important;
 }
+
 .about_us #countdown-element img {
   max-width: 30px;
   position: absolute;
@@ -536,9 +626,11 @@ ul.contact-information li {
   left: -5px;
   top: -20px;
 }
+
 .body_box .home-content.about-page {
   padding-top: 15vh;
 }
+
 .location_inner.about_us h3.resouces_title {
   margin-top: 20px;
   font-size: 24px;
@@ -546,50 +638,64 @@ ul.contact-information li {
   margin-bottom: 10px;
   font-weight: bold !important;
 }
+
 .about_us p.toml_link {
   display: block;
 }
+
 .about_us p.toml_link a:hover {
-  color: #ff4040;
+  color: #ff4040 !important;
 }
+
 .location_inner.about_us ul.links_resousrces li {
   line-height: 22px;
   padding-bottom: 3px;
   font-family: "gothammedium";
 }
+
 .location_inner.about_us ul.links_resousrces li a {
   font-family: "gothambook";
 }
+
 .location_inner.about_us ul.links_resousrces li a:hover {
-  color: #ff4040;
+  color: #ff4040 !important;
 }
+
 .location_inner.about_us {
   margin-top: 20px;
 }
+
 .home-content.location-page {
   width: 100%;
 }
+
 .home-content.location-page .loaction_content {
   width: 60%;
 }
-.home-content.location-page .loaction_content .location_inner{
+
+.home-content.location-page .loaction_content .location_inner {
   margin-top: 10px;
 }
+
 .home-content.location-page .location_map {
   width: 40%;
   text-align: center;
 }
+
 .home-content .servers-contnet .location_inner p img {
   vertical-align: middle;
   max-width: 50px;
   height: auto;
 }
+
 .home-content.location-page .loaction_content .location_inner p {
   font-size: 17px;
 }
+
 .body_box .home-content.location-page {
   padding-top: 18vh;
 }
+
 .body_box .home-content.location-page iframe {
   height: 460px;
   max-width: 90%;
@@ -598,19 +704,23 @@ ul.contact-information li {
   display: block;
   /*    filter: grayscale(100%) invert(95%) contrast(90%);*/
 }
+
 .body_box .home-content.location-page .servers-contnet {
   max-width: 100%;
   align-items: center;
 }
+
 .home-content.contact-page h3 {
   font-size: 18px;
   line-height: 26px;
-  margin:20px 0;
+  margin: 20px 0;
 }
+
 .proudly_seection p img {
   display: inline-block;
   vertical-align: middle;
 }
+
 .proudly_seection p span {
   color: #ff4040;
 }
@@ -618,15 +728,18 @@ ul.contact-information li {
 .proudly_seection p small {
   font-size: 10px;
 }
+
 .about_us p.proudly_seection {
   clear: both;
   margin: 16px 0;
   display: block;
 }
+
 .body_box.about-us_main {
   height: 100%;
   padding-bottom: 100px;
 }
+
 /* Footer css  */
 footer {
   position: absolute;
@@ -634,14 +747,17 @@ footer {
   width: 100%;
   text-align: center;
 }
+
 footer p {
   font-size: 14px;
   vertical-align: middle;
   padding: 0 15px;
 }
+
 footer p a {
   color: #5076f2;
 }
+
 footer p span {
   color: #ff4040;
 }
@@ -649,6 +765,7 @@ footer p span {
 footer p small {
   font-size: 10px;
 }
+
 footer p:first-child {
   margin-bottom: 0;
 }
@@ -656,16 +773,19 @@ footer p:first-child {
 footer p:last-child {
   margin-top: 0;
 }
+
 /* Media css */
 @media (min-width: 1441px) {
   .body_box .home-content.location-page iframe {
     height: 500px;
   }
 }
+
 @media (min-width: 1681px) {
   .body_box .home-content {
     padding-top: 30vh;
   }
+
   .body_box .home-content .animated-content .text img {
     max-width: 90px;
     position: absolute;
@@ -673,120 +793,148 @@ footer p:last-child {
     left: -20px;
     top: -30px;
   }
+
   .body_box .home-content .top-heading-content h3 {
     font-size: 40px;
     line-height: 70px;
   }
+
   .body_box .home-content .top-heading-content {
     max-width: 815px;
   }
+
   .body_box .home-content .top-heading-content h1 {
     font-size: 60px;
   }
+
   .body_box .home-content .top-heading-content h5 {
     font-size: 32px;
     line-height: 56px;
   }
+
   .body_box .home-content .animated-content {
     font-size: 40px;
     margin-top: 40px;
   }
-  header .header_navigation ul.navigation li.nav-items a {
-    font-size: 18px;
-  }
+
   .social_nav li a img {
     max-width: 30px;
   }
+
   .body_box .home-content.servers-page {
     padding-top: 22vh;
   }
+
   .home-content .we-are-running h3 {
     font-size: 36px;
   }
+
   .home-content .we-are-running ul li {
     padding-bottom: 5px;
     font-size: 22px;
     line-height: 26px;
   }
+
   .home-content .we-are-running h3 img {
     width: 90px;
     height: auto;
   }
+
   .home-content.location-page .loaction_content .location_inner p {
     font-size: 22px;
     line-height: 30px;
   }
+
   .home-content.location-page .servers-contnet {
     max-width: 100%;
   }
+
   .body_box .home-content.location-page iframe {
     height: 650px;
     max-width: 90%;
     width: 100%;
   }
+
   .home-content .servers-contnet .location_inner p img {
     max-width: 80px;
   }
+
   .location_inner.about_us {
     font-size: 22px;
     line-height: 30px;
   }
+
   .about_us #countdown-element {
     min-width: 15px;
   }
+
   .about_us .text.hide_text {
     font-size: 0;
     min-width: 30px !important;
   }
+
   .about_us #countdown-element img {
     max-width: 50px;
     position: absolute;
     z-index: 9;
-    left: -8px;
-    top: -18px;
+    left: -18px;
+    top: -35px;
   }
+
   ul.contact-information li {
     font-size: 22px;
     line-height: 24px;
   }
+
   .home-content.contact-page h3 {
     font-size: 22px;
   }
+
   footer p small {
     font-size: 11px;
   }
+
   .location_inner.about_us ul.links_resousrces li {
     line-height: 28px;
   }
+
   .location_inner.about_us h3.resouces_title {
     margin-top: 40px;
     font-size: 24px;
   }
 }
+
 @media (max-width: 1240px) {
   .body_box .home-content {
     padding-top: 200px;
   }
+
   .body_box .home-content .top-heading-content h1 {
     font-size: 38px;
   }
+
   .body_box .home-content .top-heading-content h5 {
     font-size: 20px;
   }
+
   .body_box .home-content .top-heading-content h3 {
     font-size: 24px;
   }
+
   .body_box .home-content .animated-content {
     font-size: 22px;
   }
+
   .body_box .home-content .top-heading-content {
     padding-right: 10px;
   }
+
   .location_inner.about_us ul.links_resousrces li {
     line-height: 20px;
     font-size: 15px;
   }
 }
+
 @media (max-width: 991px) {
   .body_box {
     /* background: url(./images/main_bg.jpeg); */
@@ -796,19 +944,26 @@ footer p:last-child {
     min-height: 100vh;
     background-position: center;
   }
+
   .container {
     max-width: 100%;
     margin: 0 auto;
   }
+  .navigation {
+    min-width: 390px!important;
+  }
   .home_page_content .home-widget {
     width: 40%;
   }
+
   .home_page_content .home_content {
     width: 60%;
   }
+
   .body_box .home-content .top-heading-content h1 {
     font-size: 30px;
   }
+
   .body_box .home-content .animated-content {
     font-size: 18px;
   }
@@ -821,12 +976,13 @@ footer p:last-child {
     margin-top: 8px;
     margin-right: 10px;
   }
-  .menu-bar{
+  .menu-bar {
     cursor: pointer;
   }
   .body_box {
     padding-bottom: 200px;
   }
+
   header .header_navigation {
     position: fixed;
     width: 100%;
@@ -839,23 +995,27 @@ footer p:last-child {
     transition: 0.5s;
     text-align: left;
   }
+
   header .logo_box {
     width: 100%;
   }
+
   header .header_navigation ul.navigation li.nav-items {
     margin: 10px 10px;
     width: 100%;
   }
- 
+
   .mobile_menu img {
     max-width: 24px;
     margin-left: 15px;
     vertical-align: middle;
     width: 24px;
   }
+
   .mobile_menu a img {
     margin-top: -18px;
   }
+
   header .header_navigation .social_nav {
     display: none;
   }
@@ -865,85 +1025,104 @@ footer p:last-child {
     opacity: 1;
     left: 0;
     z-index: 999;
-    
+
   }
+
   header .header_navigation ul.navigation li.nav-items a {
     font-size: 18px;
   }
- 
+
   .home-content .we-are-running {
     width: 100%;
   }
+
   .logo_box a,
   .logo_box a span {
     font-size: 24px;
   }
+
   .body_box .home-content .top-heading-content h3,
   .body_box .home-content .top-heading-content h5 {
     font-size: 20px;
   }
+
   .body_box .home-content .top-heading-content h1 {
     font-size: 38px;
   }
+
   .body_box .home-content .animated-content {
     font-size: 24px;
     margin-top: 10px;
     flex-wrap: wrap;
   }
+
   .home-content.location-page .location_map,
   .home-content.location-page .loaction_content {
     width: 100%;
   }
+
   .body_box .home-content.location-page iframe {
     max-width: 100%;
     margin-top: 30px;
   }
+
   .home-content .we-are-running h3 {
     font-size: 20px;
   }
+
   footer p small {
     font-size: 9px;
     line-height: 12px;
   }
+
   .home-content .servers-contnet .location_inner p img {
     max-width: 30px;
   }
+
   .body_box .home-content .top-heading-content h1 {
     font-size: 32px;
   }
+
   .home_page_content .home_content {
     width: 100%;
   }
+
   .home_page_content .home-widget {
     width: 100%;
     margin-top: 40px;
   }
 }
+
 @media (max-width: 479px) {
   .home-content .we-are-running h3 img {
     max-width: 50px;
     height: auto;
   }
+
   .home-content .we-are-running h3 {
     font-size: 17px;
   }
+
   .logo_box a,
   .logo_box a span {
     font-size: 22px;
-    float: left;
   }
+
   .logo_box .logo img {
     max-width: 50px;
     margin-top: -10px;
     height: auto;
   }
+
   .body_box .home-content .top-heading-content h1 {
     font-size: 32px;
   }
+
   .home-content.contact-page h3 {
     font-size: 16px;
     line-height: 22px;
   }
+
   .body_box .home-content .animated-content .text {
     margin-top: 10px;
     width: 100%;
@@ -954,63 +1133,72 @@ footer p:last-child {
 
 /* Styles for Firefox */
 * {
-  scrollbar-width: thin; /* 'auto' or 'thin' */
-  scrollbar-color: #5e5e5e #2e2e2e; /* thumb and track color */
+  scrollbar-width: thin;
+  /* 'auto' or 'thin' */
+  scrollbar-color: #5e5e5e #2e2e2e;
+  /* thumb and track color */
 }
 
-#countdown-element{
+#countdown-element {
   width: 20px;
 }
 
-.coinmarketcap-currency-widget{
+.coinmarketcap-currency-widget {
   border: 2px solid #e1e5ea;
   border-radius: 10px;
-  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   min-width: 285px;
   background: rgba(8, 36, 58, 0.4);
   overflow: hidden;
 }
-.coinmarketcap-currency-widget .header{
+
+.coinmarketcap-currency-widget .header {
   display: flex;
   padding: 12px 0;
   justify-content: space-evenly;
   border-bottom: 1px solid #e1e5ea;
 }
-.coinmarketcap-currency-widget .header .logo{
-flex: 0.3;
+
+.coinmarketcap-currency-widget .header .logo {
+  flex: 0.3;
 }
-.coinmarketcap-currency-widget .header .logo > img{
- width: 46px;
-    height: 46px;
+
+.coinmarketcap-currency-widget .header .logo>img {
+  width: 46px;
+  height: 46px;
 
 }
-.coinmarketcap-currency-widget .header .title > h2 {
+
+.coinmarketcap-currency-widget .header .title>h2 {
   font-size: 18px;
 
 }
 
-.coinmarketcap-currency-widget .header .title > h4 {
+.coinmarketcap-currency-widget .header .title>h4 {
   font-size: 20px;
 }
-.coinmarketcap-currency-widget .header .title > h4 > span{
+
+.coinmarketcap-currency-widget .header .title>h4>span {
   font-size: 14px;
   font-weight: 500;
 }
-.coinmarketcap-currency-widget .header .title > h4 > .red-text{
+
+.coinmarketcap-currency-widget .header .title>h4>.red-text {
   color: #d94040;
 }
 
-.coinmarketcap-currency-widget .header .title > h2 >a{
+.coinmarketcap-currency-widget .header .title>h2>a {
   color: rgb(16, 112, 224) !important;
 }
 
-.coinmarketcap-currency-widget .details{
+.coinmarketcap-currency-widget .details {
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #e1e5ea;
 
 }
-.coinmarketcap-currency-widget .details > div{
+
+.coinmarketcap-currency-widget .details>div {
   flex: 1;
   text-align: center;
   float: left;
@@ -1019,21 +1207,41 @@ flex: 0.3;
   border-right: 1px solid #e1e5ea;
   line-height: 1em;
 
-  
+
 }
-.coinmarketcap-currency-widget .details > div > p{
+
+.coinmarketcap-currency-widget .details>div>p {
   margin-bottom: 10px;
   padding: 0;
 }
-.coinmarketcap-currency-widget .details > div > span{
+
+.coinmarketcap-currency-widget .details>div>span {
   font-size: 16px;
 }
-.coinmarketcap-currency-widget .footer{
+
+.coinmarketcap-currency-widget .footer {
   text-align: center;
   clear: both;
   font-size: 12px;
   font-style: italic;
   padding: 8px 0;
   text-decoration: none;
-    color: rgb(16, 112, 224);
+  color: rgb(16, 112, 224);
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+
+.server-state-full {
+  background-color: #32e685!important; /* green */
+}
+
+.server-state-unknown {
+  background-color: #f0ad4e!important; /* yellow */
+}
+
+.server-state-insane {
+  background-color: #d9534f!important; /* red */
 }

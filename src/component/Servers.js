@@ -19,7 +19,7 @@ const ServersPage = () => {
                     <li>- One-year ledger history node </li>
                   </ul>
                 </div>
-                <div className="we-are-running">
+                <div className="we-are-running" style={{"padding-bottom": "100px"}}>
                   <h3>
                     <img src={connection} width="60" height="60" /> Our servers
                     are running on:{" "}

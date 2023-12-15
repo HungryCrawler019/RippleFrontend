@@ -49,7 +49,6 @@ padding-top: 3px;
 
 
 .logo {
-  display: flex;
   align-items: center;
   text-decoration: none;
 }
@@ -61,7 +60,7 @@ padding-top: 3px;
 }
 
 .header_navigation {
-  display: flex;
+  display: flex!important;
   justify-content: flex-end;
   margin-right: 35px;
 }

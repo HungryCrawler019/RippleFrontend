@@ -17,9 +17,9 @@ const Header = ({ isSticky }) => {
         <div className="container-fluid">
           <div className="row">
             <div className="logo_box column">
-              <NavLink className="logo" to="/">
+              <NavLink className="logo" to="/mainpage">
                 <img width="60" height="60" src={camelImage} alt="Logo" />
-                <span style={{ color: "#ff4040" }}>XRP</span>&nbsp;{" "}
+                <span style={{ color: "#ff4040" }}>XRP</span>&nbsp;
                 <span style={{ color: "#fff" }}>Kuwait</span>
               </NavLink>
               <div className="mobile_menu">
@@ -32,7 +32,7 @@ const Header = ({ isSticky }) => {
                   />
                 </span>
                 <NavLink
-                  href="https://twitter.com/33baid"
+                  to="https://twitter.com/33baid"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -48,26 +48,26 @@ const Header = ({ isSticky }) => {
               <nav>
                 <ul className="navigation">
                   <li className="nav-items">
-                    <NavLink to="/servers" activeClassName="active">
+                    <NavLink to="/servers" activeClassName="active" onClick={() => toggleMenu()}>
                       Servers
                     </NavLink>
                   </li>
                   <li className="nav-items">
-                    <NavLink to="/location" activeClassName="active">
+                    <NavLink to="/location" activeClassName="active" onClick={() => toggleMenu()}>
                       Location
                     </NavLink>
                   </li>
                   <li className="nav-items">
-                    <NavLink to="/about" activeClassName="active">
+                    <NavLink to="/about" activeClassName="active" onClick={() => toggleMenu()}>
                       About
                     </NavLink>
                   </li>
                   <li className="nav-items">
-                    <NavLink to="/contact" activeClassName="active">
+                    <NavLink to="/contact" activeClassName="active" onClick={() => toggleMenu()}>
                       Contact
                     </NavLink>
                   </li>
-                  <li className="nav-items" activeClassName="active">
+                  <li className="nav-items" activeClassName="active" onClick={() => toggleMenu()}>
                     <NavLink to="/hub" activeClassName="active">
                       XRPK Hub
                     </NavLink>

@@ -11,7 +11,7 @@ const PeerTable = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      fetch("http://localhost:8001/peerinfo")
+      fetch("https://xrpkuwait.com/peerinfo")
         .then((response) => response.json())
         .then((data) => setPeers(data))
         .catch((error) => {
@@ -25,7 +25,7 @@ const PeerTable = () => {
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
   return (
-    <div className="container mt-5">
+    <div className="mx-5 mt-5" style={{ "marginBottom": "100px" }}>
       <div
         className="card mt-5 py-4 shadow-sm"
         style={{
@@ -35,14 +35,14 @@ const PeerTable = () => {
         }}
       >
         <h3 className="p-3 text-center">Peer Information</h3>
-        <div className="container" style={{ overflowX: "auto" }}>
-          <table className="table table-rounded">
+        <div className="mx-5" style={{ overflowX: "auto" }}>
+          <table className="table table-rounded" style={{ "textAlign": "center" }}>
             <thead>
               <tr>
                 <th>Public Key</th>
                 <th>Country</th>
                 <th>Version</th>
-                <th>Server State</th>
+                <th className="no-wrap">Server State</th>
                 <th>Direction</th>
                 <th>Latency</th>
                 <th>Ledgers</th>
@@ -51,9 +51,7 @@ const PeerTable = () => {
             <tbody>
               {peers.map((peer) => (
                 <tr key={peer.pubkey}>
-                  <td>{`${peer.pubkey.substring(0, 31)} ${peer.pubkey.substring(
-                    32
-                  )}`}</td>
+                  <td>{peer.pubkey}</td>
                   <td>
                     <ReactCountryFlag
                       countryCode={peer.country}
@@ -63,7 +61,11 @@ const PeerTable = () => {
                     />
                   </td>
                   <td>{peer.version}</td>
-                  <td>{peer.serverState}</td>
+                  <td><span className={`badge rounded-pill server-state-${peer.serverState}`}
+                    style={{
+                      padding: "7px 15px",
+                      color: "black"
+                    }}>{peer.serverState}</span></td>
                   <td>
                     {peer.direction == "inbound" ? (
                       <Lottie
