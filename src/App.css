@@ -404,7 +404,7 @@ header .header_navigation nav {
 }
 
 .body_box .home-content {
-  padding-top: 250px;
+  padding-top: 150px;
   width: 100%;
 }
 
@@ -743,7 +743,7 @@ ul.contact-information li {
 /* Footer css  */
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   width: 100%;
   text-align: center;
 }
@@ -906,7 +906,7 @@ footer p:last-child {
 
 @media (max-width: 1240px) {
   .body_box .home-content {
-    padding-top: 200px;
+    padding-top: 120px;
   }
 
   .body_box .home-content .top-heading-content h1 {
@@ -1244,4 +1244,18 @@ footer p:last-child {
 
 .server-state-insane {
   background-color: #d9534f!important; /* red */
+}
+
+.statistics-panel {
+  margin-top : 200px;
+}
+
+.statistics-item {
+  margin : 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inline-link {
+  color : rgb(255, 64, 64)!important
 }
