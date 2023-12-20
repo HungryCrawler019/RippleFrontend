@@ -14,8 +14,8 @@ const ContactPage = () => {
                 <h1>Contact </h1>
                 <div className="location_inner">
                   <h3>
-                    We value your feedback and are here to assist you. Please
-                    feel free to reach out to us using any of the methods below.
+                    We value your feedback and we are here to assist you. Please
+                    feel free to reach out about using any of the methods below.
                     We look forward to hearing from you!
                   </h3>
                   <ul className="contact-information">

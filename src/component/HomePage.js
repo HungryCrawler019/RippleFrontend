@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ok from "../images/wired-flat-14-doc-ok.gif";
 import logo from "../images/52.png";
 import Typed from "react-typed";
+import MainServerStateTable from "./MainServerStateTable";
 
 const useExternalScript = (src) => {
   useEffect(() => {
@@ -142,94 +143,11 @@ const HomePage = () => {
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
-              margin: "70px 0px 10px 0px",
             }}
           >
-            <div className="title d-flex justify-content-center">
-              <h4>XRPL live statistics</h4>
-            </div>
-            <div
-              className="d-flex justify-content-between"
-              style={{
-                border: "1px solid #A9A9A9",
-                width: "100%",
-                margin: "10px 0px",
-                padding: "15px 20px",
-                overflowX: "auto",
-              }}
-            >
-              <div className="statistics-item">
-                <span>Ledger index</span>
-                <a href="/" className="inline-link">
-                  #84690527
-                </a>
-              </div>
-              <div className="statistics-item">
-                <span>Close time</span>
-                <span>7:43:02 AM</span>
-              </div>
-              <div className="statistics-item">
-                <span>Transactions</span>
-                <span>37(12.33txs/s)</span>
-              </div>
-              <div className="statistics-item">
-                <span>Validation quorum</span>
-                <span>
-                  28(
-                  <a href="/" className="inline-link">
-                    35 proposers
-                  </a>
-                  )
-                </span>
-              </div>
-              <div className="statistics-item">
-                <span>Accounts</span>
-                <span>4,919,355</span>
-              </div>
-              <div className="statistics-item">
-                <span>Usernames</span>
-                <span>132,906</span>
-              </div>
-            </div>
-            <div
-              className="d-flex justify-content-between"
-              style={{
-                border: "1px solid #A9A9A9",
-                width: "100%",
-                margin: "10px 0px",
-                padding: "15px 20px",
-                overflowX: "auto",
-              }}
-            >
-              <span className="statistics-item">
-                <span>NFT minted</span>
-                <span>5,117,163</span>
-              </span>
-              <span className="statistics-item">
-                <span>NFT burned</span>
-                <span>370,731</span>
-              </span>
-              <span className="statistics-item">
-                <span>NFT issuers</span>
-                <span>
-                  <a href="/" className="inline-link">
-                    6,073
-                  </a>
-                </span>
-              </span>
-              <span className="statistics-item">
-                <span>Current owners</span>
-                <span>31,887</span>
-              </span>
-              <span className="statistics-item">
-                <span>NFT transfers</span>
-                <span>1,516,682</span>
-              </span>
-              <span className="statistics-item">
-                <span>NFTs for sale</span>
-                <span>61,206</span>
-              </span>
-            </div>
+            
+
+            <MainServerStateTable />
           </div>
         </div>
       </div>
