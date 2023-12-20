@@ -23,7 +23,7 @@ const HomePage = () => {
       videoElement.removeEventListener("loadedmetadata", handleLoadedMetadata);
       videoElement.removeEventListener("ended", handleVideoEnd); // Remove event listener when the component unmounts
     };
-  }, [history]); // Add history to the dependency array
+  }, []); // Add history to the dependency array
   
   const handleSkipIntro = () => {
     navigate('/mainpage');

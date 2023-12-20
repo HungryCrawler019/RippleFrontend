@@ -5,7 +5,7 @@ import Typed from "react-typed";
 
 const useExternalScript = (src) => {
   useEffect(() => {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.src = src;
     script.async = true;
     document.body.appendChild(script);
@@ -20,7 +20,9 @@ const HomePage = () => {
   const [changeText, setChangeText] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
-  useExternalScript("https://files.coinmarketcap.com/static/widget/currency.js");
+  useExternalScript(
+    "https://files.coinmarketcap.com/static/widget/currency.js"
+  );
 
   const handleComplete = () => {
     setTimeout(() => {
@@ -118,9 +120,115 @@ const HomePage = () => {
                     </div>
                     <div className="footer">Powered by CoinMarketCap</div>
                   </div> */}
-                  <div className="coinmarketcap-currency-widget" data-currencyid="52" data-base="USD" data-secondary="" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-statsticker="true" data-stats="USD"></div>
+                  <div
+                    className="coinmarketcap-currency-widget"
+                    data-currencyid="52"
+                    data-base="USD"
+                    data-secondary=""
+                    data-ticker="true"
+                    data-rank="true"
+                    data-marketcap="true"
+                    data-volume="true"
+                    data-statsticker="true"
+                    data-stats="USD"
+                  ></div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div
+            className="row d-flex"
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              margin: "70px 0px 10px 0px",
+            }}
+          >
+            <div className="title d-flex justify-content-center">
+              <h4>XRPL live statistics</h4>
+            </div>
+            <div
+              className="d-flex justify-content-between"
+              style={{
+                border: "1px solid #A9A9A9",
+                width: "100%",
+                margin: "10px 0px",
+                padding: "15px 20px",
+                overflowX: "auto",
+              }}
+            >
+              <div className="statistics-item">
+                <span>Ledger index</span>
+                <a href="/" className="inline-link">
+                  #84690527
+                </a>
+              </div>
+              <div className="statistics-item">
+                <span>Close time</span>
+                <span>7:43:02 AM</span>
+              </div>
+              <div className="statistics-item">
+                <span>Transactions</span>
+                <span>37(12.33txs/s)</span>
+              </div>
+              <div className="statistics-item">
+                <span>Validation quorum</span>
+                <span>
+                  28(
+                  <a href="/" className="inline-link">
+                    35 proposers
+                  </a>
+                  )
+                </span>
+              </div>
+              <div className="statistics-item">
+                <span>Accounts</span>
+                <span>4,919,355</span>
+              </div>
+              <div className="statistics-item">
+                <span>Usernames</span>
+                <span>132,906</span>
+              </div>
+            </div>
+            <div
+              className="d-flex justify-content-between"
+              style={{
+                border: "1px solid #A9A9A9",
+                width: "100%",
+                margin: "10px 0px",
+                padding: "15px 20px",
+                overflowX: "auto",
+              }}
+            >
+              <span className="statistics-item">
+                <span>NFT minted</span>
+                <span>5,117,163</span>
+              </span>
+              <span className="statistics-item">
+                <span>NFT burned</span>
+                <span>370,731</span>
+              </span>
+              <span className="statistics-item">
+                <span>NFT issuers</span>
+                <span>
+                  <a href="/" className="inline-link">
+                    6,073
+                  </a>
+                </span>
+              </span>
+              <span className="statistics-item">
+                <span>Current owners</span>
+                <span>31,887</span>
+              </span>
+              <span className="statistics-item">
+                <span>NFT transfers</span>
+                <span>1,516,682</span>
+              </span>
+              <span className="statistics-item">
+                <span>NFTs for sale</span>
+                <span>61,206</span>
+              </span>
             </div>
           </div>
         </div>

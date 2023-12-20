@@ -13,6 +13,7 @@ import LocationPage from "./component/LocationPage";
 import AboutPage from "./component/AboutPage";
 import ContactPage from "./component/ContactPage";
 import ServersPage from "./component/Servers";
+import NotFoundPage from "./component/404NotFoundPage";
 import Layout from "./component/Layout";
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/servers" element={<ServersPage />} />
+        <Route path="*" element={<NotFoundPage/>}/>
         </Route>
       </Routes>
     </Router>

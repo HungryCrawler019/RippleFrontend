@@ -8,11 +8,6 @@ const Footer = () => {
       <p>
         &copy; 2023 <span>XRP</span> Kuwait. All rights reserved.
       </p>
-      <p>
-        <small>
-          Pubkey: nHUfxETNHsA9reyYCVYwNztEbifMg6U9YUdcgVvzMwGNpphKSSf6
-        </small>
-      </p>
     </footer>
   );
 };
