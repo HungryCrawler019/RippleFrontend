@@ -48,7 +48,10 @@ const ServerStateTable = () => {
         />
         <h3 className="p-3 text-center">Server State Information</h3>
         <div className="mx-5" style={{ overflowX: "auto" }}>
-          <table className="table table-rounded" style={{ "textAlign": "center" }}>
+          <table
+            className="table table-rounded"
+            style={{ textAlign: "center" }}
+          >
             <thead>
               <tr>
                 <th>Node</th>
@@ -65,24 +68,26 @@ const ServerStateTable = () => {
             <tbody>
               {servers.length ? (
                 servers.map((peer) => (
-                  <tr key={peer.Node}>
-                    <td>{peer.node}</td>
-                    <td>{peer.pubkey}</td>
-                    <td>{peer.ledger_Index}</td>
-                    <td>{peer.uptime}</td>
-                    <td>{peer.proposers}</td>
-                    <td>{peer.quorum}</td>
-                    <td>{peer.version}</td>
-                    <td>{peer.peers}</td>
-                    <td style={centeredCellStyle}>
-                      <Lottie
-                        animationData={onlineAnimationData}
-                        loop={true}
-                        autoplay={true}
-                        style={{ width: 30, height: 30, margin: "0 auto" }}
-                      />
-                    </td>
-                  </tr>
+                  <>
+                    <tr key={peer.Node}>
+                      <td>{peer.node}</td>
+                      <td>{peer.pubkey}</td>
+                      <td>{peer.ledger_Index}</td>
+                      <td>{peer.uptime}</td>
+                      <td>{peer.proposers}</td>
+                      <td>{peer.quorum}</td>
+                      <td>{peer.version}</td>
+                      <td>{peer.peers}</td>
+                      <td style={centeredCellStyle}>
+                        <Lottie
+                          animationData={onlineAnimationData}
+                          loop={true}
+                          autoplay={true}
+                          style={{ width: 30, height: 30, margin: "0 auto" }}
+                        />
+                      </td>
+                    </tr>
+                  </>
                 ))
               ) : (
                 <tr key="XRPKuwait HUB">

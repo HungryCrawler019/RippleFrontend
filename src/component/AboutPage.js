@@ -16,8 +16,8 @@ const AboutPage = () => {
                 <div className="location_inner about_us">
                   <p>
                     XRP Kuwait is currently running 4 cluster rippled servers,
-                    running on a validator / ledger history mode along side 150+
-                    other validators / 700+ ledger history nodes. All validators
+                    running on a validator / ledger history  / public hub / submission node
+                    along side 150+ other validators / 700+ ledger history nodes. All validators
                     come to an agreement on orders and the outcome of XRP
                     transactions every&nbsp;{" "}
                     <div id="countdown-element" className="text">

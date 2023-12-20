@@ -1,44 +1,85 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background-color: #000;
-`;
-
-const Title = styled.h1`
-  color: #fff;
-  font-size: 4rem;
-  margin-bottom: 2rem;
-`;
-
-const Message = styled.p`
-  color: #fff;
-  font-size: 1.5rem;
-`;
-
-const Button = styled.button`
   background-color: #fff;
-  color: #000;
-  border: none;
-  padding: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
 `;
 
 const NotFoundPage = () => {
-  const [message, setMessage] = useState('The page you are looking for does not exist.');
+  const [message, setMessage] = useState(
+    "The page you are looking for does not exist."
+  );
 
   return (
     <Container>
-      <Title>404 Not Found</Title>
-      <Message>{message}</Message>
-      <Button onClick={() => setMessage('A different message')}>Change Message</Button>
+      <img
+        src="/html/assets/images/404-not-found-theme.jpg"
+        alt="Camel"
+        style={{
+          width: "40%",
+          position: "fixed",
+          bottom: 0,
+          left: "-20%",
+          zIndex : "0",
+        }}
+      />
+      <div
+        style={{
+          alignSelf: "center",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <span className="fs-4 text-black text-center">404 Page not found</span>
+        <img
+          src="/html/assets/images/warning.png"
+          style={{
+            width: "20vw",
+          }}
+          alt="Warning"
+        />
+        <div style={{
+          display : "flex",
+          flexDirection : "column",
+          marginTop : "30px"
+        }}>
+          <span
+            className="text-black text-center fw-bold"
+            style={{
+              fontSize: "50px",
+              lineHeight: 1,
+            }}
+          >
+            SLOW DOWN
+          </span>
+          <span className="text-danger text-end">CAMELS CROSSING</span>
+        </div>
+        <div style={{
+          width : "70%"
+        }}>
+          <p
+            className="text-black fs-5"
+            style={{
+              marginBottom: 0,
+            }}
+          >
+            The page you are looking for does not exist.
+          </p>
+          <p className="text-black">
+            If you think this is a mistake, please{" "}
+            <a href="/contact" className="text-black text-decoration-underline">
+              contact us
+            </a>
+            &nbsp;or click the home button to go back to the main page.
+          </p>
+        </div>
+      </div>
     </Container>
   );
 };
