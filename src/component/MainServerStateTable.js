@@ -28,14 +28,14 @@ const MainServerStateTable = () => {
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      fetch("http://xrpkuwait.com/serverstates")
+      fetch("http://localhost:8001/serverstates")
         .then((response) => response.json())
         .then((data) => setServers(data))
         .catch((error) => {
           setServers([]);
           console.error("Error fetching data:", error);
         });
-      fetch("http://xrpkuwait.com/statistics")
+      fetch("http://localhost:8001/statistics")
         .then((response) => response.json())
         .then((data) => setStatistics(data))
         .catch((error) => {
@@ -49,7 +49,7 @@ const MainServerStateTable = () => {
           });
           console.error("Error fetching data:", error);
         });
-    }, 1000); // 1000ms = 1 second
+    }, 5000); // 1000ms = 1 second
 
     // Clear the interval when the component unmounts
     return () => clearInterval(intervalId);
