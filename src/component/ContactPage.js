@@ -10,7 +10,9 @@ const ContactPage = () => {
         <div className="container">
           <div className="row">
             <div className="column home-content contact-page">
-              <div className="servers-contnet">
+              <div className="servers-contnet" style={{
+                marginTop : "100px"
+              }}>
                 <h1>Contact </h1>
                 <div className="location_inner">
                   <h3>

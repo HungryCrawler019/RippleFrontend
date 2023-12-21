@@ -24,6 +24,7 @@ const ServerStateTable = () => {
     return () => clearInterval(intervalId);
   }, []); // Empty dependency array ensures this effect runs only once on mount
 
+ 
   // Style for the table cell that will center the content
   const centeredCellStyle = {
     textAlign: "center",

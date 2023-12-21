@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -25,7 +26,7 @@ const NotFoundPage = () => {
           position: "fixed",
           bottom: 0,
           left: "-20%",
-          zIndex : "0",
+          zIndex: "0",
         }}
       />
       <div
@@ -36,7 +37,14 @@ const NotFoundPage = () => {
           alignItems: "center",
         }}
       >
-        <span className="fs-4 text-black text-center">404 Page not found</span>
+        <h1
+          className="text-black text-center"
+          style={{
+            fontSize: "50px",
+          }}
+        >
+          404 Page not found
+        </h1>
         <img
           src="/html/assets/images/warning.png"
           style={{
@@ -44,11 +52,13 @@ const NotFoundPage = () => {
           }}
           alt="Warning"
         />
-        <div style={{
-          display : "flex",
-          flexDirection : "column",
-          marginTop : "30px"
-        }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginTop: "30px",
+          }}
+        >
           <span
             className="text-black text-center fw-bold"
             style={{
@@ -60,9 +70,13 @@ const NotFoundPage = () => {
           </span>
           <span className="text-danger text-end">CAMELS CROSSING</span>
         </div>
-        <div style={{
-          width : "70%"
-        }}>
+        <br />
+        <br />
+        <div
+          style={{
+            width: "70%",
+          }}
+        >
           <p
             className="text-black fs-5"
             style={{
@@ -79,6 +93,12 @@ const NotFoundPage = () => {
             &nbsp;or click the home button to go back to the main page.
           </p>
         </div>
+        <a href="/mainpage" className="btn" style={{
+          borderRadius : "0px",
+          background : "#000",
+          marginTop : "24px",
+          padding : "5px 25px"
+        }}> XRPK HOME</a>
       </div>
     </Container>
   );

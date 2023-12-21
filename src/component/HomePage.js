@@ -138,15 +138,13 @@ const HomePage = () => {
             </div>
           </div>
           <div
-            className="row d-flex"
+            className="row d-flex mx-auto"
             style={{
               justifyContent: "center",
               alignItems: "center",
               width: "100%",
             }}
           >
-            
-
             <MainServerStateTable />
           </div>
         </div>
