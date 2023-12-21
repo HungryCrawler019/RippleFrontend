@@ -14,7 +14,9 @@ const AboutPage = () => {
               <div className="servers-contnet">
                 <h1>About </h1>
                 <div className="location_inner about_us">
-                  <p>
+                  <p style={{
+                    width : "120%"
+                  }}>
                     XRP Kuwait is currently running 4 cluster rippled servers,
                     running on a validator / ledger history  / public hub / submission node
                     along side 150+ other validators / 700+ ledger history nodes. All validators

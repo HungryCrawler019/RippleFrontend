@@ -404,7 +404,7 @@ header .header_navigation nav {
 }
 
 .body_box .home-content {
-  padding-top: 150px;
+  padding-top: 80px;
   width: 100%;
 }
 
@@ -524,7 +524,7 @@ header .header_navigation nav {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 800px;
+  max-width: 850px;
 }
 
 .home-content .servers-contnet .location_inner p span {
@@ -783,7 +783,7 @@ footer p:last-child {
 
 @media (min-width: 1681px) {
   .body_box .home-content {
-    padding-top: 30vh;
+    padding-top: 15vh;
   }
 
   .body_box .home-content .animated-content .text img {
@@ -1249,12 +1249,22 @@ footer p:last-child {
 .statistics-panel {
   margin-top : 200px;
 }
-
+@media (min-width: 1400px) {
+  .statistics-item {
+    margin : 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+  }
+}
 .statistics-item {
   margin : 0px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 85px;
+  white-space: none;
 }
 .inline-link {
   color : rgb(255, 64, 64)!important
